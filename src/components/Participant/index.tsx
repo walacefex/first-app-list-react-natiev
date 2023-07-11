@@ -8,7 +8,7 @@ export function Participant({name, onRemove}: ParticipantProps) {
       <Text style={styles.name}>{name}</Text>
       <TouchableOpacity style={styles.button} onPress={onRemove}>
           <Text style={styles.buttonText}>
-            +
+            -
           </Text>
         </TouchableOpacity>
     </View>
