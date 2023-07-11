@@ -7,6 +7,9 @@ export  function Home() {
   function handleParticipantAdd() {
     console.log('ok')
   }
+  function handleParticipantRemove(name: string) {
+    console.log(`removendo ${name}`)
+  }
 
   return (
     <View style={styles.container}>
@@ -25,8 +28,8 @@ export  function Home() {
         </TouchableOpacity>
       </View>
 
-      <Participant name="Walace" />
-      <Participant name="Telles" />
+      <Participant name="Walace" onRemove={() => handleParticipantRemove("Walace")} />
+      <Participant name="Telles" onRemove={() => handleParticipantRemove("Telles")} />
     </View>
   );
 }
