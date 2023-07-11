@@ -43,6 +43,15 @@ export const styles = StyleSheet.create({
   buttonText:{
     color: '#FFF',
     fontSize: 24,
+  },
+  listEmptyText:{
+    backgroundColor: '#1F1E25',
+    color: '#FFF',
+    borderRadius: 5,
+    fontSize: 16,
+    lineHeight: 24,
+    textAlign: 'center',
+    padding: 24,
   }
 
 });
