@@ -9,16 +9,16 @@ export  function Home() {
 
   function handleParticipantAdd() {
     if (participants.includes(participantName)) {
-      Alert.alert('Participante já adicionado', 'Esse participante já foi adicionado a lista de presença')
+      return Alert.alert('Participante já adicionado', 'Esse participante já foi adicionado a lista de presença')
     } 
     setParticipants(prevState => [...prevState, participantName ]);
     setParticipantName('');
   }
-  function handleParticipantRemove(name: string) {
+  function handleParticipantRemove(name: string) { 
     Alert.alert('Remover participante', `Deseja remover ${name} da lista de presença?`, [
       {
         text: 'Sim',
-        onPress: () => Alert.alert('Deletado!')
+        onPress: () => setParticipants(prevState => prevState.filter(participant => participant !== name))
       },
       {
         text: 'Não',
